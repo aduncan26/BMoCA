@@ -1,0 +1,17 @@
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/UnityEngine.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/UnityEditor.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Mono.Cecil.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Unity.DataContract.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/obj/Debug/Assembly-CSharp.dll
+/Users/alexduncan/Documents/Work Stuff/NatalieJeremijenko/Unity Projects/BMoCA/obj/Debug/Assembly-CSharp.dll.mdb
