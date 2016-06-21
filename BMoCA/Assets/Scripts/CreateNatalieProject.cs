@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -18,64 +17,52 @@ public class CreateNatalieProject : MonoBehaviour {
 	public GameObject farmacyBVPrefab;
 
 
-	public List<Vector3> butterflyBridgePositions = new List<Vector3> ();
+	public Vector3[] butterflyBridgePositions ;
 
-	public List<Vector3> farmacyPositions = new List<Vector3> ();
+	public Vector3[] farmacyPositions ;
 
-	enum NatalieProjects{
-		ButterflyBridge,
-		Farmacy
-	}
+	public List<GameObject> inactiveProjectObjects = new List<GameObject>();
+
 	// Use this for initialization
 	void Start () {
 		instance = this;
 
-		EnvironmentHealthManager.maxProjects = butterflyBridgePositions.Count + farmacyPositions.Count;
+		CreateAllProjects (butterflyBridgePositions, butterflyBridgeBVPrefab);
+		CreateAllProjects (farmacyPositions, farmacyBVPrefab);
+
+		ShuffleList ();
+
+		EnvironmentHealthManager.maxProjects = butterflyBridgePositions.Length + farmacyPositions.Length;
 	}
 	
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			CreateNewProject ();
+//			CreateNewProject ();
 		}
 	}
 
-	void CreateNewProject(){
-		int numProjects = Enum.GetNames (typeof(NatalieProjects)).Length;
+	void ShuffleList(){
+		List<GameObject> temp = new List<GameObject> ();
+		for (int i = inactiveProjectObjects.Count - 1; i >= 0; i--) {
+			int whichObjectToPull = Random.Range (0, i);
 
-		NatalieProjects newProject =  (NatalieProjects)UnityEngine.Random.Range(0, numProjects);
+			temp.Add (inactiveProjectObjects [whichObjectToPull]);
+			inactiveProjectObjects.RemoveAt (whichObjectToPull);
+		}
 
+		inactiveProjectObjects = temp;
+	}
 
-		switch (newProject) {
-		case NatalieProjects.ButterflyBridge:
-			if (butterflyBridgePositions.Count > 0) {
-				int whichPosition = UnityEngine.Random.Range (0, butterflyBridgePositions.Count);
+	void CreateAllProjects(Vector3[] listOfPositions, GameObject objectPrefab){
+		for (int i = 0; i < listOfPositions.Length; i++) {
+			GameObject newObject = Instantiate (objectPrefab, listOfPositions [i], Quaternion.identity) as GameObject;
 
-				Instantiate (butterflyBridgeBVPrefab, butterflyBridgePositions [whichPosition], Quaternion.identity);
-				Instantiate (butterflyBridgeTDPrefab, butterflyBridgePositions [whichPosition], Quaternion.identity);
+			inactiveProjectObjects.Add (newObject);
 
-				butterflyBridgePositions.RemoveAt (whichPosition);
-
-				EnvironmentHealthManager.GetInstance ().NewProject ();
-			} else {
-				newProject = NatalieProjects.Farmacy;
-			}
-			break;
-		
-		case NatalieProjects.Farmacy:
-			if (farmacyPositions.Count > 0) {
-				int whichPosition = UnityEngine.Random.Range (0, farmacyPositions.Count);
-
-				Instantiate (farmacyBVPrefab, farmacyPositions [whichPosition], Quaternion.identity);
-				Instantiate (farmacyTDPrefab, farmacyPositions [whichPosition], Quaternion.identity);
-
-				farmacyPositions.RemoveAt (whichPosition);
-
-				EnvironmentHealthManager.GetInstance ().NewProject ();
-			} else {
-				newProject = NatalieProjects.ButterflyBridge;
-			}
-			break;
+			newObject.SetActive (false);
 		}
 	}
+
+
 
 }

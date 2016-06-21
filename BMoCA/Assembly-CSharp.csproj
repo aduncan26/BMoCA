@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\ButterflyMovement.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\CreateNatalieProject.cs" />
+     <Compile Include="Assets\Scripts\CursorMovement.cs" />
      <Compile Include="Assets\Scripts\EnvironmentHealthManager.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\PinchZoom.cs" />

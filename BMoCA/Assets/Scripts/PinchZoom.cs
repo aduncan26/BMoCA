@@ -13,7 +13,7 @@ public class PinchZoom : MonoBehaviour {
 	float zoomSpeed = 0f;
 
 	const float ZOOM_ACCELERATION = 3f;
-	const float ZOOM_DECELERATION = 0.8f;
+	const float ZOOM_DECELERATION = 0.85f;
 
 	const float MAX_ZOOM_SPEED = 10f;
 
